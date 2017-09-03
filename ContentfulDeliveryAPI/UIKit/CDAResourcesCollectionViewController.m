@@ -116,11 +116,13 @@
     }
     
     if (showSearchBar) {
+#ifndef TARGET_OS_TV
         self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0.0, 0.0,
                                                                        self.view.frame.size.width,
                                                                        44.0)];
         self.searchBar.delegate = self;
         self.searchBar.showsCancelButton = YES;
+#endif
     } else {
         self.searchBar = nil;
     }
@@ -131,12 +133,14 @@
 }
 
 -(void)showError:(NSError*)error {
+#ifndef TARGET_OS_TV
     UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)
                                                         message:error.localizedDescription
                                                        delegate:nil
                                               cancelButtonTitle:NSLocalizedString(@"OK", nil)
                                               otherButtonTitles:nil];
     [alertView show];
+#endif
 }
 
 -(void)viewWillAppear:(BOOL)animated {

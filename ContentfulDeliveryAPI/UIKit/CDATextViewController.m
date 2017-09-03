@@ -32,7 +32,9 @@
     
     self.textView = [[UITextView alloc] initWithFrame:self.view.bounds];
     self.textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+#ifndef TARGET_OS_TV
     self.textView.editable = NO;
+#endif
     self.textView.font = [UIFont systemFontOfSize:18.0];
     self.textView.text = self.text;
     [self.view addSubview:self.textView];

@@ -200,7 +200,9 @@
         [self.dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
         
 #if TARGET_OS_IPHONE
+#ifndef TARGET_OS_TV
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+#endif
 #endif
     }
     return self;

@@ -104,12 +104,14 @@
 }
 
 -(void)showError:(NSError*)error {
+#ifndef TARGET_OS_TV
     UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)
                                                         message:error.localizedDescription
                                                        delegate:nil
                                               cancelButtonTitle:NSLocalizedString(@"OK", nil)
                                               otherButtonTitles:nil];
     [alertView show];
+#endif
 }
 
 -(void)viewWillAppear:(BOOL)animated {

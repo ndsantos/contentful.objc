@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   }
 
   s.authors      = { "Boris Bügling" => "boris@buegling.com", "JP Wright" => "jp@contentful.com" }
-  s.source       = { :git => "https://github.com/contentful/contentful.objc.git",
-                     :tag => "Delivery-#{s.version.to_s}" }
+  s.source       = { :path => "/Users/ns/Repo/iOS/Libraries/Contentful"
+                    }
   s.requires_arc = true
 
   s.source_files = [
@@ -34,6 +34,11 @@ Pod::Spec.new do |s|
   s.ios.frameworks            = 'UIKit', 'MapKit'
   s.ios.public_header_files   = 'ContentfulDeliveryAPI/UIKit/{CDAEntriesViewController,CDAFieldsViewController,UIImageView+CDAAsset,CDAMapViewController,CDAResourcesCollectionViewController,CDAResourcesViewController,CDAResourceCell}.h'
 
+  s.tvos.deployment_target = '9.0'
+  s.tvos.source_files          = 'ContentfulDeliveryAPI/UIKit/*.{h,m}'
+  s.tvos.frameworks            = 'UIKit', 'MapKit'
+  s.tvos.public_header_files   = 'ContentfulDeliveryAPI/UIKit/{CDAEntriesViewController,CDAFieldsViewController,UIImageView+CDAAsset,CDAMapViewController,CDAResourcesCollectionViewController,CDAResourcesViewController,CDAResourceCell}.h'
+  
   s.osx.deployment_target     = '10.10'
 
   s.dependency 'AFNetworking', '~> 3.1.0'
