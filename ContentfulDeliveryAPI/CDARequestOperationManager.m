@@ -8,7 +8,7 @@
 
 @import Darwin.TargetConditionals;
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IOS
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 #endif
 
@@ -26,6 +26,8 @@
 #import "CDAResponse+Private.h"
 #import "CDAResponseSerializer.h"
 #import "CDAUtilities.h"
+
+#define kCFURLErrorZeroByteResource  -1014
 
 @interface CDARequestOperationManager ()
 

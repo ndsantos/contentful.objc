@@ -14,6 +14,9 @@
 #import "CDAResource+Private.h"
 #import "CDAUtilities.h"
 
+#define kCFURLErrorNotConnectedToInternet -1009
+
+
 BOOL CDAIgnoreProperty(objc_property_t property);
 NSString* CDAPropertyGetTypeString(objc_property_t property);
 BOOL CDAPropertyIsReadOnly(objc_property_t property);

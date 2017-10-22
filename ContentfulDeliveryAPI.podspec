@@ -40,6 +40,11 @@ Pod::Spec.new do |s|
   s.tvos.public_header_files   = 'ContentfulDeliveryAPI/UIKit/{CDAEntriesViewController,CDAFieldsViewController,UIImageView+CDAAsset,CDAMapViewController,CDAResourcesCollectionViewController,CDAResourcesViewController,CDAResourceCell}.h'
   
   s.osx.deployment_target     = '10.10'
+  
+  s.watchos.deployment_target = '2.0'
+  s.watchos.source_files          = 'ContentfulDeliveryAPI/UIKit/*.{h,m}'
+  s.watchos.frameworks            = 'UIKit', 'MapKit'
+  s.watchos.public_header_files   = 'ContentfulDeliveryAPI/UIKit/{CDAEntriesViewController,CDAFieldsViewController,UIImageView+CDAAsset,CDAMapViewController,CDAResourcesCollectionViewController,CDAResourcesViewController,CDAResourceCell}.h'
 
   s.dependency 'AFNetworking', '~> 3.1.0'
   s.dependency 'ISO8601', '~> 0.6.0'
