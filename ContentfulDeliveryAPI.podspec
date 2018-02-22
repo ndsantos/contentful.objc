@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
   s.watchos.frameworks            = 'UIKit', 'MapKit'
   s.watchos.public_header_files   = 'ContentfulDeliveryAPI/UIKit/{CDAEntriesViewController,CDAFieldsViewController,UIImageView+CDAAsset,CDAMapViewController,CDAResourcesCollectionViewController,CDAResourcesViewController,CDAResourceCell}.h'
 
-  s.dependency 'AFNetworking', '~> 3.1.0'
+  s.dependency 'AFNetworking'
   s.dependency 'ISO8601', '~> 0.6.0'
 end
 
